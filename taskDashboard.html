@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script> -->
+
+    <!-- href="https://fontawesome.com/releases/v6.4/css/all.css" -->
+    <script src="./script.js" defer></script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="taskDashboard">
+      <aside class="navigation_sidebar">
+        <ul>
+          <li>
+            <a href="/index.html"><img src="./TOdo-1.png" alt="todo logo" /></a>
+          </li>
+          <li><a class="navigation_link" href="#">Task Tracker</a></li>
+          <li><a class="navigation_link" href="#">Analytics</a></li>
+          <li><a class="navigation_link" href="#">Notes</a></li>
+          <li><a class="navigation_link" href="#">Possible Improvement</a></li>
+        </ul>
+      </aside>
+      <div class="task_newTask">
+        <h3>New Task</h3>
+        <div class="task_input">
+          <!-- <label for="task_input"> -->
+          <input id="newTskInp" type="text" name="task_input" /><button
+            class="task_button button button_medium"
+          >
+            Add Task
+          </button>
+          <!-- </label> -->
+        </div>
+      </div>
+      <div class="task_board">
+        <div class="module_taskss task_tobe">
+          <h3 class="task_board_heading">Tasks</h3>
+          <ul id="drop0" class="module_drag_ul">
+            <li id="drag1" draggable="true" class="task_item draggable_list">
+              <p id="taskDescp">Hello world1</p>
+              <span>
+                <svg
+                  class="edit pntr"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 512 512"
+                >
+                  <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+                  />
+                </svg>
+                <svg
+                  class="delete pntr"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"
+                  />
+                </svg>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="module_taskss task_inProcess">
+          <h3 class="task_board_heading">In Process</h3>
+          <ul id="drop1" class="module_drag_ul"></ul>
+        </div>
+        <div class="module_taskss task_completed">
+          <h3 class="task_board_heading">Completed</h3>
+          <ul id="drop2" class="module_drag_ul"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
